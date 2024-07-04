@@ -28,7 +28,7 @@ class MaterialController extends Controller
 
         return response()->json($material, 201);
     }
-    // Alfredo
+    
     public function update(Request $request, $id)
     {
         // Validar los datos de entrada
