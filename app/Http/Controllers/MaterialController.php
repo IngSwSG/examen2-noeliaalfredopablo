@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Material;
 use Illuminate\Http\Request;
 
 class MaterialController extends Controller
@@ -28,7 +29,7 @@ class MaterialController extends Controller
 
         return response()->json($material, 201);
     }
-    
+    // Alfredo
     public function update(Request $request, $id)
     {
         // Validar los datos de entrada
@@ -46,14 +47,5 @@ class MaterialController extends Controller
 
         return response()->json($material, 200);
     }
-
-    public function index()
-    {
-        // Obtener todos los materiales con sus categorías
-        $materiales = Material::with('categoria')->get();
-
-        return response()->json($materiales, 200);
-    }
-
 
 }
